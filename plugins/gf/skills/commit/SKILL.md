@@ -1,5 +1,5 @@
 ---
-description: Analyze staged/unstaged changes and create a Conventional Commits message, then commit
+description: Analyze staged/unstaged changes and create a Conventional Commits message, then commit. Use when the user wants to commit their changes or asks for a commit message — triggers include "commit", "커밋", "커밋해줘", "commit this", "write a commit message".
 ---
 
 # Smart Commit

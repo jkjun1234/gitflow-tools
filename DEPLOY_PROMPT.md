@@ -10,7 +10,7 @@
 
 - **Repo root:** the directory containing `.claude-plugin/marketplace.json` (this file lives next to it).
 - **Marketplace name:** `gitflow-tools`
-- **Plugin name:** `gitflow-buddy`
+- **Plugin name (id):** `gf` (display name: gitflow-buddy)
 - **GitHub owner/username:** `jkjun1234`
 - **Target repo:** `jkjun1234/gitflow-tools` (public)
 - **Git identity:** name `jkjun1234`, email `jkjun1234@gmail.com`
@@ -94,13 +94,13 @@ Print these for the human to run in an **interactive** Claude Code session (the 
 
 ```
 /plugin marketplace add jkjun1234/gitflow-tools
-/plugin install gitflow-buddy@gitflow-tools
+/plugin install gf@gitflow-tools
 /reload-plugins
 ```
 
 Then the plugin exposes:
-- `/gitflow-buddy:commit`
-- `/gitflow-buddy:pr`
+- `/gf:commit`
+- `/gf:pr`
 - the `code-reviewer` agent (ask Claude to "review my diff").
 
 ## Failure handling

@@ -1,5 +1,5 @@
 ---
-description: Gather the current branch's commits and open a GitHub pull request with a generated title and body
+description: Gather the current branch's commits and open a GitHub pull request with a generated title and body. Use when the user wants to open or create a PR — triggers include "PR", "pull request", "PR 만들어줘", "open a PR", "create a pull request".
 ---
 
 # Create Pull Request

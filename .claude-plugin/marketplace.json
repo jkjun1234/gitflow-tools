@@ -7,11 +7,15 @@
   "description": "Git/PR workflow helpers for Claude Code — smart commits, PR authoring, and code review.",
   "plugins": [
     {
-      "name": "gitflow-buddy",
-      "source": "./plugins/gitflow-buddy",
+      "name": "gf",
+      "displayName": "gitflow-buddy",
+      "source": "./plugins/gf",
       "description": "Smart commits, PR creation, and an automated code-reviewer agent for the Git/PR workflow.",
       "category": "productivity",
       "keywords": ["git", "pull-request", "commit", "code-review", "workflow"]
     }
-  ]
+  ],
+  "renames": {
+    "gitflow-buddy": "gf"
+  }
 }

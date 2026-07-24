@@ -1,6 +1,6 @@
 ---
 name: code-reviewer
-description: Reviews the current diff, branch, or a specific file for bugs, security issues, and performance problems. Use before opening a PR or when the user asks for a code review. Read-only — reports findings, does not edit.
+description: Reviews the current diff, branch, or a specific file for bugs, security issues, and performance problems. Use before opening a PR or when the user asks for a code review — triggers include "review my diff", "review this", "코드 리뷰", "리뷰해줘", "diff 리뷰". Read-only — reports findings, does not edit.
 tools: Read, Grep, Glob, Bash
 ---
 

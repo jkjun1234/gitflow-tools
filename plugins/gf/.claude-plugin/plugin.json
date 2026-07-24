@@ -1,5 +1,6 @@
 {
-  "name": "gitflow-buddy",
+  "name": "gf",
+  "displayName": "gitflow-buddy",
   "description": "Smart commits, PR creation, and an automated code-reviewer agent for the Git/PR workflow.",
   "author": {
     "name": "jkjun1234",
