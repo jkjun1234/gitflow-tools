@@ -18,7 +18,7 @@ A Claude Code plugin marketplace with **gitflow-buddy** — a Git/PR workflow he
 ## Install
 
 ```bash
-/plugin marketplace add jkjun/gitflow-tools
+/plugin marketplace add jkjun1234/gitflow-tools
 /plugin install gitflow-buddy@gitflow-tools
 /reload-plugins
 ```
