@@ -9,8 +9,36 @@ A Claude Code plugin marketplace with **gitflow-buddy** (plugin id `gf`) — a G
 | `/gf:commit` | skill | Analyzes changes and writes a Conventional Commits message, then commits after confirmation |
 | `/gf:pr` | skill | Gathers branch commits and opens a GitHub PR with a generated title and body (uses `gh`) |
 | `code-reviewer` | agent | Read-only review of a diff/branch/file for bugs, security, and performance |
+| `/gf:on` `/gf:off` `/gf:status` | skills | Toggle **gf-mode** — natural-language auto-routing (see below) |
 
 > The plugin id is short (`gf`) so commands stay quick to type: `/gf:commit`, `/gf:pr`.
+
+## gf-mode — natural-language auto-routing (toggle)
+
+By default the plugin only acts when you **explicitly** run a command (`/gf:commit`, etc.), so a casual "커밋해줘" never fires the workflow unexpectedly.
+
+Turn **gf-mode ON** to make plain-language requests route through the plugin automatically:
+
+```bash
+/gf:on          # or just say "gf 켜줘"
+```
+
+While ON:
+
+| You say | What runs |
+|---------|-----------|
+| "커밋해줘" / "commit this" | `gf:commit` |
+| "PR 만들어줘" / "open a PR" | `gf:pr` |
+| "리뷰해줘" / "review my diff" | `code-reviewer` |
+
+Turn it back **OFF** anytime:
+
+```bash
+/gf:off         # or "gf 꺼줘"
+/gf:status      # check current state
+```
+
+**How it works:** a `UserPromptSubmit` hook reads the state file `~/.claude/gf-mode` on every message and injects a directive that either enables or suppresses auto-routing. State is **OFF** by default and persists across sessions and plugin updates. Explicit `/gf:` commands always work regardless of mode. Requires `node` on PATH (used only by the hook).
 
 ## Requirements
 
