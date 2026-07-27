@@ -38,7 +38,7 @@ Turn it back **OFF** anytime:
 /gf:status      # check current state
 ```
 
-**How it works:** a `UserPromptSubmit` hook reads the state file `~/.claude/gf-mode` on every message and injects a directive that either enables or suppresses auto-routing. State is **OFF** by default and persists across sessions and plugin updates. Explicit `/gf:` commands always work regardless of mode. Requires `node` on PATH (used only by the hook).
+**How it works:** a `UserPromptSubmit` hook reads the state file `~/.claude/gf-mode` on every message. When **ON**, it injects a directive that routes natural-language commit/PR/review requests to the plugin; when **OFF** it injects nothing, so there is zero overhead and the skills stay dormant. State is **OFF** by default and persists across sessions and plugin updates. Explicit `/gf:` commands always work regardless of mode. Requires `node` on PATH (used only by the hook).
 
 ## Requirements
 

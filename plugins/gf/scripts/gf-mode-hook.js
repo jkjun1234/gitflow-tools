@@ -26,11 +26,9 @@ const ON_TEXT =
   'for review requests. Follow each component’s own confirmation steps before ' +
   'taking any git or GitHub action.';
 
-const OFF_TEXT =
-  'gf-mode is OFF. Do NOT auto-invoke gf:commit, gf:pr, or the code-reviewer agent ' +
-  'from natural-language requests; run them only when the user explicitly types a ' +
-  '/gf: command. Handle plain commit/PR/review requests yourself as usual. The ' +
-  'gf:on, gf:off, and gf:status controls remain available.';
-
-process.stdout.write(mode === 'on' ? ON_TEXT : OFF_TEXT);
+// OFF (default): inject nothing. The gf skills stay dormant unless the user
+// invokes them explicitly with a /gf: command.
+if (mode === 'on') {
+  process.stdout.write(ON_TEXT);
+}
 process.exit(0);
